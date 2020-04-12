@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gazebo_ros_control</name>
+  <version>0.1.0</version>
+  <description>gazebo_ros_control</description>
+
+  <maintainer email="mal_a_chillingg@yahoo.com">Malachi Lingg</maintainer>
+
+  <license>BSD</license>
+
+  <url type="repository">https://github.com/22arw/gazebo_ros_control</url>
+
+  <author>Jonathan Bohren</author>
+  <author>Dave Coleman</author>
+  <author>Malachi Lingg</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>gazebo_dev</build_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>control_toolbox</depend>
+  <depend>controller_manager</depend>
+  <depend>pluginlib</depend>
+  <depend>hardware_interface</depend>
+  <depend>transmission_interface</depend>
+  <depend>joint_limits_interface</depend>
+  <depend>urdf</depend>
+  <depend>angles</depend>
+  <depend>ackermann_controller</depend> <!-- this is necessary for AckermannRobotHWSim -->
+
+  <export>
+    <gazebo_ros_control plugin="${prefix}/robot_hw_sim_plugins.xml"/>
+  </export>
+</package>

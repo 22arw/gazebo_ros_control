@@ -1,0 +1,25 @@
+<library path="lib/libdefault_robot_hw_sim">
+
+  <class
+    name="gazebo_ros_control/DefaultRobotHWSim"
+    type="gazebo_ros_control::DefaultRobotHWSim"
+    base_class_type="gazebo_ros_control::RobotHWSim">
+    <description>
+      A default robot simulation interface which constructs joint handles from an SDF/URDF.
+    </description>
+  </class>
+
+</library>
+
+<library path="lib/libackermann_robot_hw_sim">
+
+  <class
+    name="gazebo_ros_control/AckermannRobotHWSim"
+    type="gazebo_ros_control::AckermannRobotHWSim"
+    base_class_type="gazebo_ros_control::RobotHWSim">
+    <description>
+      An Ackermann robot simulation interface which builds on DefaultRobotHWSim.
+    </description>
+  </class>
+
+</library>
