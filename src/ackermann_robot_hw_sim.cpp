@@ -1,4 +1,5 @@
 #include <gazebo_ros_control/ackermann_robot_hw_sim.h>
+//#include <ros/names.h>
 
 namespace gazebo_ros_control
 {
@@ -21,7 +22,9 @@ bool AckermannRobotHWSim::initSim(
     ROS_DEBUG_STREAM_NAMED("AckermannRobotHWSim", "Default RobotHWSim derived class initialized correctly.");
   }
   ros::NodeHandle controller_nh(model_nh.getNamespace() + "/ackermann_controller");
-  
+  //This is was added to get nh where I wanted to store the description, model_nh is the same as robot_namespace by default
+  model_nh = ros::names::parentNamespace(model_nh.getNamespace());  
+
   ROS_DEBUG_STREAM_NAMED("AckermannRobotHWSim", "Initializing Ackermann Control");
 
   if(!ackermann_sim_.init(this, model_nh, controller_nh))
